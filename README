@@ -1,1 +1,23 @@
-Doctumentation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Midterm Project Documentation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Setup
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Used Microsfot Azure remote server desktop to complete this project
+- Data downloaded from datedo.com (Chinook database)
+- Ran Chinook database setup SQL query to create database on localhost
+- Used Select * statements to select tables and saved the output as a JSON file for MongoDB deployment 
+- Created a Jupyter Notebook and connected to SQL database and inserted the JSON files into MongoDB collections
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Methods
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- Created and populated new Dimension tables 'customer' and 'invoiceline' by extracting data from MongoDB
+- Performed necessary transformations on these dimension dataframes using pandas
+- Loaded the transformed dataframes into the new data warehouse 'Chinook_dw' by creating new tables
+- Validate that the new tables were added using SELECT query statements
+- Create the fact dataframe using pandas by extracting the 'invoice' data from MongoDB
+- Performed necessary transformations on the fact dataframe by merging the 'customer' and 'invoiceline' dataframes with 'invoice' dataframe by joining foreign keys
+- Get the date dimension table and added it into the fact dataframe
+- Load the transformed fact table into the 'Chinook_dw' data warehouse database\
+- Validate that the table was inserted and creating using SELECT statement
+- Use aggregate and group_by to perform data analysis on the new fact table
